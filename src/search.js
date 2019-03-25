@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Pagination from "react-js-pagination";
 
+
 class Search extends Component {
 	
 	constructor(props) {
@@ -16,10 +17,12 @@ class Search extends Component {
 		this.handleSearch = this.handleSearch.bind(this);
 		this.handlePageChange=this.handlePageChange.bind(this);
 	}
+	
 
 	handleSearch(e) {
 		const searchString = this.state.searchText;
 		const _this = this;
+		
 		axios
 		  .get('http://3.122.7.162:5000/v60/admin/search/user?keyword='+ searchString + '&alias=false', {withCredentials: true})
 			.then(function(response) {
@@ -57,31 +60,18 @@ class Search extends Component {
 
 		const renderTodos = currentTodos.map((row, index) => {
 			console.log(index + " : " + row.username);
-
-          return 	<tr key={index} ><td >{row.username}</td>
-					<td>{row.displayName}</td>
-					<td>{row.status}</td></tr>;
+			if(row.attributes[0].value < 50) {
+				return 	<tr className="showRed" key={index} ><td >{row.username}</td>
+						<td>{row.displayName}</td>
+						<td>{row.status}</td></tr>;
+			} else {
+				return 	<tr key={index} ><td >{row.username}</td>
+						<td>{row.displayName}</td>
+						<td>{row.status}</td></tr>;
+			}
         });
 		
-		/*if (data.length > 0) {
-		data.forEach(function(element) {
-			let list = [];
-			if (element.attributes[0].value < 50) {
-				list = <tr className = "showRed">
-							<td>{element.username} </td>		
-							<td>{element.displayName}</td>
-							<td>{element.status} </td> 	
-						</tr>
-				} else {
-					list =  <tr> 
-								<td>{ element.username} </td>
-								<td>{ element.displayName }</td>
-								<td>{ element.status } </td> 	
-							</tr>
-				}
-				showData.push(list);
-			});
-		}*/
+		
 		return (
 			<div className="search-box" style={{marginTop: 20}}>
 				<form className="search-form" onSubmit={this.handleSearch}>
