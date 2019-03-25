@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ccc;
+}
+
+.login-box {
+	max-width: 700px;
+	margin: 50px auto;
+	background: #EE8700;
+}
+
+.login-text {	
+	padding-top: 50px;
+}
+
+.login-form {
+	max-width: 234px;
+	margin: 0 auto;
+}
+
+.login-form input {
+	display: block;
+	background: #FAFFBD;
+	padding: 15px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+	max-width: 200px;
+	margin: 25px 0;
+}
+
+.login-form input[type="submit"] {
+	margin-right: 0;
+	margin-left: auto;
+	background: #000;
+	color: #fff;
+	padding: 15px 20px;
+	border: none;
+}
+
+.login-form .hr {
+	border-top: 2px solid #fff;
+	padding-bottom: 30px;
+	margin-top: 30px;
+}
+
+.search-box {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.search-form {
+	background: #F1B12A;
+	border: solid 7px #fff;
+	padding: 40px 0;
+	overflow: hidden;	
+}
+
+.search-form h3 {
+		text-align: left;
+		margin-left: 75px;
+		color: #666;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 10px
+}
+.search-form input[type="text"] {
+	float: left;
+	margin-left: 75px;
+	padding: 7px;
+	
+}
+
+.search-form input[type="submit"] {
+	float: right;
+	margin-right: 75px;
+	background: #ccc;
+	padding: 12px;
+	border: none;
+	color: #333;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+.table-heading {
+	display: inline-block;
+}
+
+th {
+	background: #CCC;
+	text-align: center;
+	padding: 5px 0;
+	color: #333;
+}
+table {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+td {
+	text-align: center;
+	background: #fff;
+	padding: 5px 0;
+	color: #333;
+}
+td:first-child {
+	text-align: left;
+	padding-left: 10px;
+}
+tr:nth-child(2n +1 ) td {
+	background: #EEE;
+}
+
+th:first-child {
+	width: 550px;
+}
+th:last-child {
+	width: 150px;
+}
+th:nth-child(2) {
+	width: 350px;
+}
+
+.searchResults {
+	background: #EEE;
+	border: solid 7px #fff;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.searchResultText {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-weight: 700;
+	color: #666;
+	text-transform: uppercase;
+}
+
+.searchResultText span {
+	font-weight: 400;
+	text-transform: initial;
+}
+
+tr.showRed td {
+	color: red;
+}
+
+.users-text {
+	font-weight: 400;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.pagination li {
+	margin: 0 10px;
+}
+
+.pagination li.active a {
+	margin: 0 10px;
+	color: red;
+}
+
+.login-failed {
+	text-align: left;
+	padding-bottom: 30px;
+	color: #333;
+	font-weight: 600;
+}
